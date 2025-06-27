@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-font: 'Bebas Neue', sans-serif;
-    --secondary-font: 'Roboto', sans-serif;
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --tertiary-font: 'Raleway', sans-serif;
 
-    --primary-color: #B7D1DA; 
-    --secondary-color: #4F646F; 
+    --primary-color: #B7D1DA;
+    --secondary-color: #4F646F;
     --background-color: #F0EDEE;
     --text-color: #0a090c;
-    --accent-color: #000022; 
+    --accent-color: #000022;
     --border-radius: 8px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -17,9 +18,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-rendering: optimizeSpeed;
 }
 
 header {
+    font-family: var(--primary-font);
     background-color: red;
     padding: 0.5vw;
     display: flex;
@@ -34,5 +37,44 @@ header {
         & .logo {
             width: 3vw;
         }
+
+        & h1 {
+            font-family: var(--tertiary-font);
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            margin-bottom: 2px;
+        }
     }
+
+    & nav {
+
+        & ul {
+            display: flex;
+            gap: 0.5vw;
+            list-style: none;
+
+            & li .nav-item {
+                color: black;
+                padding: 0.5vw 0.75vw;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 1.2rem;
+            }
+
+            & li .nav-item:hover {
+                border-bottom: 1.5px solid black;
+            }
+        }
+
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
