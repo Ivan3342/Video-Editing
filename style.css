@@ -77,6 +77,8 @@ main {
     align-items: center;
     justify-content: center;
     font-family: var(--primary-font);
+    width: 80vw;
+    margin: 0 auto;
 
     & #hero {
         height: 80vh;
@@ -112,6 +114,24 @@ main {
 
     & #aboutme {
         height: 30vh;
+        display: flex;
+
+        & ul {
+            list-style: none;
+            width: 20vw;
+            & li {
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid black;
+                font-size: 1.5rem;
+            }
+        }
+
+        & h2 {
+            font-family: var(--tertiary-font);
+            font-size: 2rem;
+            font-weight: 900;
+        }
     }
 
     & #projects {
