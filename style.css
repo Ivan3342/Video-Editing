@@ -120,6 +120,7 @@ main {
             font-size: 1.1rem;
             border-radius: var(--border-radius);
             transition: 0.2s ease;
+            box-shadow: var(--box-shadow);
         }
 
         & li a:hover {
@@ -131,22 +132,37 @@ main {
     & #aboutme {
         height: 30vh;
         display: flex;
+        text-align: justify;
+        font-size: 1.2rem;
 
         & ul {
             list-style: none;
-            width: 20vw;
+            width: calc(50vw - calc((80vw - 50vw)/2));
+            margin: 0 50px;
             & li {
-                padding: 10px;
+                padding: 15px;
                 margin: 10px;
-                border: 1px solid black;
                 font-size: 1.5rem;
+                border-radius: var(--border-radius);
+                font-weight: 700;
+                background-color: var(--bright-pink);
+                color: var(--white);
+                text-shadow: 1px 1px 5px var(--wenge);
+                box-shadow: var(--box-shadow);
             }
+        }
+
+        & p {
+            margin: 15px 0;
+            font-weight: 300;
         }
 
         & h2 {
             font-family: var(--tertiary-font);
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 900;
+            border-bottom: var(--bright-pink) 5px solid;
+            width: fit-content;
         }
     }
 
