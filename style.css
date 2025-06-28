@@ -5,12 +5,12 @@
     --secondary-font: 'Montserrat', sans-serif;
     --tertiary-font: 'Raleway', sans-serif;
 
-    --primary-color: #B7D1DA;
-    --secondary-color: #4F646F;
-    --background-color: #F0EDEE;
-    --text-color: #0a090c;
-    --accent-color: #000022;
-    --border-radius: 8px;
+    --white: #FCFCFC;
+    --bright-pink: #F7567C;
+    --cornsilk: #FFFAE3;
+    --tiffany-blue: #99E1D9;
+    --wenge: #5D576B;
+    --border-radius: 5px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -21,9 +21,12 @@
     text-rendering: optimizeSpeed;
 }
 
+body {
+    background: linear-gradient(var(--white), var(--tiffany-blue));
+}
+
 header {
     font-family: var(--primary-font);
-    background-color: red;
     padding: 0.5vw;
     display: flex;
     justify-content: space-around;
@@ -64,7 +67,7 @@ header {
             }
 
             & li .nav-item:hover {
-                border-bottom: 1.5px solid black;
+                border-bottom: 2px solid var(--bright-pink);
             }
         }
 
@@ -89,6 +92,11 @@ main {
 
         & div:last-of-type {
             flex-grow: 2;
+            
+            & img {
+                height: 80vh;
+                border-radius: 0 0 100vw 100vw;
+            }
         }
 
         & h1 {
@@ -108,7 +116,15 @@ main {
             color: black;
             text-decoration: none;
             padding: 10px 20px;
-            background-color: red;
+            background-color: var(--tiffany-blue);
+            font-size: 1.1rem;
+            border-radius: var(--border-radius);
+            transition: 0.2s ease;
+        }
+
+        & li a:hover {
+            background-color: var(--bright-pink);
+            color: var(--white);
         }
     }
 
