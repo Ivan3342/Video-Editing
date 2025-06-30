@@ -216,6 +216,12 @@ main {
             border-radius: var(--border-radius);
         }
 
-
+    & #contacts {
+        width: 80vw;
+        & h2 {
+            font-size: 2.5rem;
+        }
+        
+    }
     }
 }
