@@ -242,5 +242,15 @@ main {
 }
 
 footer {
-    
+    background-color: var(--wenge);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        font-family: var(--primary-font);
+        color: var(--cornsilk);
+        font-size: 1.1rem;
+    }
 }
