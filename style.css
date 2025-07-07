@@ -133,6 +133,7 @@ main {
         height: fit-content;
         display: flex;
         text-align: justify;
+        align-items: center;
         font-size: 1.2rem;
         gap: 20px;
 
@@ -341,6 +342,55 @@ footer {
 }
 
 
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    
+    header {
+        padding: 1vw;
+
+        & span .logo {
+            width: 5vw;
+        }
+
+        & span h1 {
+            font-size: 2rem;
+        }
+    }
+
+    main {
+        & #hero {
+            height: calc(fit-content + 5vh);
+            flex-direction: row;
+
+            & div:last-of-type img {
+                height: 50vw;
+            }
+
+            & h1 {
+                font-size: 2.5rem;
+                text-align: left;
+            }
+
+            & ul {
+                justify-content: left;
+            }
+        }
+
+        & #projects .project-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & #projects .project {
+            width: 100%;
+        }
+
+        & #projects iframe {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}
+
 @media only screen and (min-width: 500px) and (max-width: 768px) {
     
     header {
@@ -403,9 +453,5 @@ footer {
             width: 100%;
             height: 50vh;
         }
-    }
-
-    footer & p {
-        font-size: 1rem;
     }
 }
